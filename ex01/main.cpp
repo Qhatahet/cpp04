@@ -1,29 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 21:52:45 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 22:01:43 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/09/29 21:52:07 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/09/29 21:52:23 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-
-Cat::Cat() : Animal()
-{}
-
-Cat::Cat(const Cat &obj) : Animal(obj)
+int	main(void)
 {
 
+	return (0);
 }
-
-Cat	&Cat::operator=(const Cat &obj)
-{
-	return (*this);
-}
-
-Cat::~Cat()
-{}
