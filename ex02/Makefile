@@ -4,7 +4,7 @@ CXXFLAGS=-Werror -Wall -Wextra -std=c++98
 
 NAME=Polymorphism
 
-SRC=main.cpp
+SRC=main.cpp Dog.cpp Cat.cpp Animal.cpp
 
 OBJ_DIR=obj
 
@@ -13,11 +13,11 @@ OBJ=$(SRC:%.cpp=$(OBJ_DIR)/%.o)
 all:$(NAME)
 
 $(NAME):$(OBJ)
-	$(CPP) $(FLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o:%.cpp
 	mkdir -p $(OBJ_DIR)
-	$(CPP) $(FLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ_DIR)

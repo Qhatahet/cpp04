@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 21:14:05 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 16:41:38 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/10/03 18:49:49 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/10/03 19:02:55 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 class Animal
 {
 	protected:
-		std::string type;
+		std::string	type;
 	public:
 		Animal();
 		Animal(const Animal &obj);
-		Animal& operator=(const Animal &obj);
-		virtual ~Animal();
+		Animal&	operator=(const Animal &obj);
+		~Animal();
 		std::string	getType() const;
 		virtual void	makeSound() const;
 };

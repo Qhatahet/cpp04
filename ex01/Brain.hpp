@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 21:14:05 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 16:41:38 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/10/03 19:26:07 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/10/03 19:36:28 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include <iostream>
-
-class Animal
+class Brain
 {
-	protected:
-		std::string type;
+	private:
+		
 	public:
-		Animal();
-		Animal(const Animal &obj);
-		Animal& operator=(const Animal &obj);
-		virtual ~Animal();
-		std::string	getType() const;
-		virtual void	makeSound() const;
+		
 };
 
 #endif

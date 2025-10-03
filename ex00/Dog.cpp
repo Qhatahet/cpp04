@@ -3,26 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qhatahet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 21:54:43 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 21:57:17 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/03 16:36:22 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() : Animal()
-{}
+{
+	type = "Dog";
+	std::cout << "Dog default constructor called" << std::endl;
+}
 
 Dog::Dog(const Dog &obj) : Animal(obj)
-{}
+{
+	std::cout << "Dog copy constructor called" << std::endl;
+}
 
 Dog	&Dog::operator=(const Dog &obj)
 {
+	Animal::operator=(obj);
+	std::cout << "Dog assignment operator called" << std::endl;
 	return (*this);
 }
 
 Dog::~Dog()
 {
+	std::cout << "Dog destructor called" << std::endl;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Woof" << std::endl;
 }

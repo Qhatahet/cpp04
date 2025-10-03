@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 21:52:33 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:00:10 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/10/03 19:22:30 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/10/03 19:22:32 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ Animal::~Animal()
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-void	Animal::makeSound() const
-{
-	std::cout << getType() << std::endl;
-}
-
 std::string	Animal::getType() const
 {
 	return (this->type);
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << getType() << std::endl;
 }

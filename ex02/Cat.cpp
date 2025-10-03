@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 21:52:45 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:09:44 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/10/03 19:00:26 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/10/03 19:10:10 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat() : Animal()
 {
 	type = "Cat";
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "Cat default constructor called" << std::endl; 
 }
 
 Cat::Cat(const Cat &obj) : Animal(obj)
@@ -32,7 +32,7 @@ Cat	&Cat::operator=(const Cat &obj)
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "cat destructor called" << std::endl;
 }
 
 void	Cat::makeSound() const
