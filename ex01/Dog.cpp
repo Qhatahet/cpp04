@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:23:15 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:23:17 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/04 13:15:24 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 Dog::Dog() : Animal()
 {
 	type = "Dog";
+	brain = new Brain();
+	if (!brain)
+	{
+		std::cout << "failed to allocate brain for dog" << std::endl;
+		return ;
+	}
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
@@ -32,6 +38,7 @@ Dog	&Dog::operator=(const Dog &obj)
 
 Dog::~Dog()
 {
+	delete brain;
 	std::cout << "Dog destructor called" << std::endl;
 }
 

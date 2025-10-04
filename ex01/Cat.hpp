@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:22:40 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:22:50 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/04 12:21:14 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
+	private:
+		Brain	*brain;
 	public:
 		Cat();
 		Cat(const Cat &obj);
