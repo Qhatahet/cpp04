@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:23:25 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/04 13:11:14 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/04 18:17:07 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ class Dog : public Animal
 		Dog(const Dog &obj);
 		Dog&	operator=(const Dog &obj);
 		~Dog();
-		void	makeSound() const;	
+		void	makeSound() const;
+		Brain	*getBrain() const;
 };
 
 #endif

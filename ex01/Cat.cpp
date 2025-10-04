@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:22:36 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/04 13:15:10 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/04 18:16:19 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,9 @@ Cat::~Cat()
 void	Cat::makeSound() const
 {
 	std::cout << "Meow" << std::endl;
+}
+
+Brain	*Cat::getBrain() const
+{
+	return (brain);
 }

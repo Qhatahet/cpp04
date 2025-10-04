@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:22:40 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/04 12:21:14 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/04 18:16:03 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Cat : public Animal
 		Cat&	operator=(const Cat &obj);
 		~Cat();
 		void	makeSound() const;
+		Brain	*getBrain() const;
 };
 
 #endif
