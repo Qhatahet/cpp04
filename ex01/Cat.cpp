@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:22:36 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/05 15:22:18 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/05 17:59:44 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,12 @@ Cat::Cat() : Animal()
 
 Cat::Cat(const Cat &obj) : Animal(obj)
 {
-	Brain *newbrain = new Brain();
-	if (!newbrain)
+	this->brain = new Brain(*obj.brain);
+	if (!this->brain)
 	{
 		std::cout << "failed to allocate brain for cat" << std::endl;
 		return ;
 	}
-	newbrain = brain;
 	std::cout <<YELLOW "Cat copy constructor called" WH<< std::endl;
 }
 
