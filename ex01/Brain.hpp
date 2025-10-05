@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qais <qais@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:26:07 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/04 16:58:17 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/05 14:49:14 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
 
-#include <iostream>
+# include <iostream>
+# include "Animal.hpp"
 
 class Brain
 {
@@ -25,6 +26,8 @@ class Brain
 		Brain&	operator=(const Brain &obj);
 		~Brain();
 		void	setIdeas(int i, std::string idea);
+		std::string	getIdea(int i) const;
+		
 };
 
 #endif

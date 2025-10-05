@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:23:25 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/04 18:17:07 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/05 15:04:34 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Dog : public Animal
 		~Dog();
 		void	makeSound() const;
 		Brain	*getBrain() const;
+		void	setBrain(Brain *obj);
 };
 
 #endif

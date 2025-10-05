@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:22:30 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:22:32 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/05 13:11:53 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 Animal::Animal()
 {
 	type = "Animal";
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << MAGENTA "Animal default constructor called" WH<< std::endl;
 }
 
 Animal::Animal(const Animal &obj)
 {
 	*this = obj;
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << MAGENTA "Animal copy constructor called" WH<< std::endl;
 }
 
 Animal	&Animal::operator=(const Animal &obj)
@@ -30,13 +30,13 @@ Animal	&Animal::operator=(const Animal &obj)
 	{
 		this->type = obj.type;
 	}
-	std::cout << "Animal assignment operator called" << std::endl;
+	std::cout << MAGENTA "Animal assignment operator called" WH<< std::endl;
 	return (*this);
 }
 
 Animal::~Animal()
 {
-	std::cout << "Animal destructor called" << std::endl;
+	std::cout << MAGENTA "Animal destructor called" WH<< std::endl;
 }
 
 std::string	Animal::getType() const
