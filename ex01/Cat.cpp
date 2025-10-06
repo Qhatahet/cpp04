@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:22:36 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/05 17:59:44 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/06 14:36:31 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ Cat::Cat(const Cat &obj) : Animal(obj)
 
 Cat	&Cat::operator=(const Cat &obj)
 {
-	brain = new Brain();
-	if (!brain)
+	Animal::operator=(obj);
+	this->brain = new Brain(*obj.brain);
+	if (!this->brain)
 	{
 		std::cout << "failed to allocate brain for cat" << std::endl;
 	}
-	Animal::operator=(obj);
 	std::cout <<YELLOW "Cat assignment operator called" WH<< std::endl;
 	return (*this);
 }

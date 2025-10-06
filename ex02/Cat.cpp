@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:00:26 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:10:10 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:57:33 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,56 @@
 Cat::Cat() : Animal()
 {
 	type = "Cat";
-	std::cout << "Cat default constructor called" << std::endl; 
+	brain = new Brain();
+	if (!brain)
+	{
+		std::cout << "failed to allocate brain for cat" << std::endl;
+		return ;
+	}
+	std::cout <<YELLOW "Cat default constructor called" WH<< std::endl;
 }
 
 Cat::Cat(const Cat &obj) : Animal(obj)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	this->brain = new Brain(*obj.brain);
+	if (!this->brain)
+	{
+		std::cout << "failed to allocate brain for cat" << std::endl;
+		return ;
+	}
+	std::cout <<YELLOW "Cat copy constructor called" WH<< std::endl;
 }
 
 Cat	&Cat::operator=(const Cat &obj)
 {
 	Animal::operator=(obj);
-	std::cout << "Cat assignment operator called" << std::endl;
+	this->brain = new Brain(*obj.brain);
+	if (!this->brain)
+	{
+		std::cout << "failed to allocate brain for cat" << std::endl;
+	}
+	std::cout <<YELLOW "Cat assignment operator called" WH<< std::endl;
 	return (*this);
 }
 
 Cat::~Cat()
 {
-	std::cout << "cat destructor called" << std::endl;
+	if (brain)
+		delete brain;
+	std::cout <<YELLOW "Cat destructor called" WH<< std::endl;
 }
 
 void	Cat::makeSound() const
 {
 	std::cout << "Meow" << std::endl;
+} 
+
+void	Cat::setBrain(Brain *obj)
+{
+	this->brain = obj;
+}
+
+Brain	*Cat::getBrain() const
+{
+	return (brain);
 }

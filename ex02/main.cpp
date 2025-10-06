@@ -3,11 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qhatahet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 21:51:54 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/09/29 21:51:56 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:12:58 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
+#include "Dog.hpp"
+#include "Cat.hpp"
+
+int	main(void)
+{
+	
+}

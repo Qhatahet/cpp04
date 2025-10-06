@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:23:15 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/05 15:04:27 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/06 14:24:33 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Dog::Dog() : Animal()
 
 Dog::Dog(const Dog &obj) : Animal(obj)
 {
-	brain = new Brain();
+	this->brain = new Brain();
 	if (!brain)
 	{
 		std::cout << "failed to allocate brain for dog" << std::endl;
@@ -38,7 +38,7 @@ Dog::Dog(const Dog &obj) : Animal(obj)
 Dog	&Dog::operator=(const Dog &obj)
 {
 	Animal::operator=(obj);
-	brain = new Brain();
+	brain = new Brain(*obj.brain);
 	if (!brain)
 	{
 		std::cout << "failed to allocate brain for dog" << std::endl;

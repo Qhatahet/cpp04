@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 19:00:17 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/06 16:57:22 by qhatahet         ###   ########.fr       */
+/*   Created: 2025/10/06 15:52:40 by qhatahet          #+#    #+#             */
+/*   Updated: 2025/10/06 15:53:06 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include <iostream>
+# include "Animal.hpp"
 
-class Cat : public Animal
+class Brain
 {
 	private:
-		Brain	*brain;
+		std::string	ideas[100];
 	public:
-		Cat();
-		Cat(const Cat &obj);
-		Cat&	operator=(const Cat &obj);
-		~Cat();
-		void	 makeSound() const override;
-		Brain	*getBrain() const;
-		void	setBrain(Brain *obj);
-
+		Brain();
+		Brain(const Brain &obj);
+		Brain&	operator=(const Brain &obj);
+		~Brain();
+		void	setIdeas(int i, std::string idea);
+		std::string	getIdea(int i) const;
+		
 };
 
 #endif

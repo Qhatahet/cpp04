@@ -4,7 +4,7 @@ CXXFLAGS=-Werror -Wall -Wextra -std=c++98
 
 NAME=Polymorphism
 
-SRC=main.cpp Dog.cpp Cat.cpp Animal.cpp
+SRC=main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
 
 OBJ_DIR=obj
 

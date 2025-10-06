@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:10:16 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:19:31 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:11:37 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,55 @@
 Dog::Dog() : Animal()
 {
 	type = "Dog";
-	std::cout << "Dog default constructor called" << std::endl;
+	brain = new Brain();
+	if (!brain)
+	{
+		std::cout << "failed to allocate brain for dog" << std::endl;
+		return ;
+	}
+	std::cout <<BLUE "Dog default constructor called" WH<< std::endl;
 }
 
 Dog::Dog(const Dog &obj) : Animal(obj)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	this->brain = new Brain();
+	if (!brain)
+	{
+		std::cout << "failed to allocate brain for dog" << std::endl;
+		return ;
+	}
+	std::cout <<BLUE "Dog copy constructor called" WH<< std::endl;
 }
 
 Dog	&Dog::operator=(const Dog &obj)
 {
 	Animal::operator=(obj);
-	std::cout << "Dog assignment operator called" << std::endl;
+	brain = new Brain(*obj.brain);
+	if (!brain)
+	{
+		std::cout << "failed to allocate brain for dog" << std::endl;
+	}
+	std::cout <<BLUE "Dog assignment operator called" WH<< std::endl;
 	return (*this);
 }
 
 Dog::~Dog()
 {
-	std::cout << "Dog destructor called" << std::endl;
+	delete brain;
+	std::cout <<BLUE "Dog destructor called" WH<< std::endl;
 }
 
 void	Dog::makeSound() const
 {
 	std::cout << "Woof" << std::endl;
+}
+
+void	Dog::setBrain(Brain *obj)
+{
+	this->brain = obj;
+}
+
+Brain	*Dog::getBrain() const
+{
+	return (brain);
 }

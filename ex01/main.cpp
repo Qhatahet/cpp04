@@ -6,7 +6,7 @@
 /*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 21:52:07 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/05 15:19:10 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:00:40 by qhatahet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,12 @@ int	main(void)
 	for (int i = 0; i < 4; i++)
 		delete animal[i];
 	
-	Cat cat;
-	cat.getBrain()->setIdeas(0, "orginal cat");
-	Cat catCopy(cat);
-	//catCopy.getBrain()->setIdeas(0, "copy cat");
-	std::cout << "\norignal cat: " << cat.getBrain()->getIdea(0) << std::endl;
-	//std::cout << "\ncopy cat: " << catCopy.getBrain()->getIdea(0) << std::endl;
+	Dog dog;
+	dog.getBrain()->setIdeas(0, "orginal dog");
+	Dog dogCopy(dog);
+	dogCopy.getBrain()->setIdeas(0, "copy dog");
+	std::cout << "\ncopy dog: " << dogCopy.getBrain()->getIdea(0) << std::endl;
+	std::cout << "\norignal dog: " << dog.getBrain()->getIdea(0) << std::endl;
+	
 	return (0);
 }
