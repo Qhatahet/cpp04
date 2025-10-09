@@ -4,7 +4,7 @@ CXXFLAGS=-Werror -Wall -Wextra -g -std=c++98
 
 NAME=Brain
 
-SRC=main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
+SRC=main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp WrongAnimal.cpp WrongCat.cpp WrongDog.cpp
 
 OBJ_DIR=obj
 
