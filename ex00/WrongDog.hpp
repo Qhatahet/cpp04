@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongDog.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qais <qais@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 19:00:17 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/09 10:26:42 by qais             ###   ########.fr       */
+/*   Created: 2025/10/09 15:12:44 by qais              #+#    #+#             */
+/*   Updated: 2025/10/09 15:22:22 by qais             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef WRONGDOG_HPP
+# define WRONGDOG_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongDog : public WrongAnimal
 {
-	private:
-		Brain	*brain;
 	public:
-		Cat();
-		Cat(const Cat &obj);
-		Cat&	operator=(const Cat &obj);
-		~Cat();
-		void	 makeSound() const;
-		Brain	*getBrain() const;
-		void	setBrain(Brain *obj);
-
+		WrongDog();
+		WrongDog(const WrongDog &obj);
+		WrongDog	&operator=(const WrongDog &obj);
+		~WrongDog();
+		void	makeSound() const;
 };
 
 #endif

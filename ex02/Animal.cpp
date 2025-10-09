@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qais <qais@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 18:49:45 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/03 19:03:08 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/09 15:11:00 by qais             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,4 @@ Animal::~Animal()
 std::string	Animal::getType() const
 {
 	return (this->type);
-}
-
-void	Animal::makeSound() const
-{
-	std::cout << getType() << std::endl;
 }

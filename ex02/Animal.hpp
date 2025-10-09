@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qais <qais@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 18:49:49 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/06 16:56:02 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/09 15:10:24 by qais             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Animal
 		Animal&	operator=(const Animal &obj);
 		virtual ~Animal();
 		std::string	getType() const;
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 };
 
 # define BLACK "\033[0;30m"

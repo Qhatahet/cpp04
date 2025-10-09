@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qhatahet <qhatahet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qais <qais@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 19:10:33 by qhatahet          #+#    #+#             */
-/*   Updated: 2025/10/06 16:57:51 by qhatahet         ###   ########.fr       */
+/*   Updated: 2025/10/09 10:26:52 by qais             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Dog : public Animal
 		Dog(const Dog &obj);
 		Dog&	operator=(const Dog &obj);
 		~Dog();
-		void	makeSound() const override;
+		void	makeSound() const;
 		Brain	*getBrain() const;
 		void	setBrain(Brain *obj);
 };
